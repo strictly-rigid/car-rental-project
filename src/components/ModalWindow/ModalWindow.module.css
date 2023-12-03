@@ -1,0 +1,126 @@
+.modalContainer {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modalWindow {
+  background-color: #ffffff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 24px;
+  width: 541px;
+  /* height: 752px; */
+  /* margin-top: 150px; */
+  /* margin-bottom: 150px; */
+}
+
+.itemContainer {
+  padding: 40px;
+}
+
+.firstRowCard {
+  margin-top: 14px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: medium;
+}
+
+.spanText {
+  color: #3470ff;
+  font-weight: 600;
+}
+
+.secondRowCard {
+  color: rgba(18, 20, 23, 0.5);
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.thirdRowCard {
+  color: rgba(18, 20, 23, 0.5);
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.description {
+  color: #121417;
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.accessoriesDescription {
+  margin-top: 24px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+.fourthRowCard {
+  color: rgba(18, 20, 23, 0.5);
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.fifthRowCard {
+  color: rgba(18, 20, 23, 0.5);
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.btnModalClose {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: none;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.rentalConditionsContainer {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.condition {
+  margin-top: 8px;
+  margin-bottom: 0;
+  background-color: #f9f9f9;
+  color: #363535;
+  /* height: 32px; */
+  padding: 7px 14px;
+  border-radius: 35px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.rentalCarBtn {
+  width: 168px;
+  height: 44px;
+  border-radius: 12px;
+  margin-top: 24px;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: #3470ff;
+}
+
+.rentalCarLink {
+  color: white;
+  text-decoration: none;
+}

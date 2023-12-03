@@ -1,0 +1,22 @@
+.catalogContainer {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 29px; */
+  padding: 0 128px;
+  justify-content: space-around;
+}
+
+.catalogItem {
+  flex-basis: 274px;
+}
+
+.btnLoadMore {
+  background-color: white;
+  border: none;
+  color: #3470ff;
+  text-decoration: underline;
+}
+
+.dropdownContainer {
+  display: block;
+}

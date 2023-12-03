@@ -1,0 +1,18 @@
+.navigation {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  border: 2px solid #121dbc;
+  border-radius: 10px;
+}
+
+.navigation a {
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 2px solid transparent;
+  font-size: 20px;
+  font-weight: 700;
+}

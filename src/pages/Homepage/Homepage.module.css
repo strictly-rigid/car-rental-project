@@ -1,0 +1,20 @@
+.homepage {
+  background-image: url("../../images/hero-pic.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  text-align: center;
+}
