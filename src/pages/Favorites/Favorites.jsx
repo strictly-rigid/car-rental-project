@@ -5,7 +5,6 @@ import css from './Favorites.module.css';
 
 export default function Favorites() {
   const favoriteCars = useSelector(selectFavCars);
-  console.log(favoriteCars);
 
   return (
     <div className={css.favoritesContainer}>

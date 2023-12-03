@@ -2,13 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCars } from '../../redux/operations';
 
-import {
-  selectCars,
-  selectIsLoading,
-  // selectCurrentPage,
-} from '../../redux/selectors';
+import { selectCars, selectIsLoading } from '../../redux/selectors';
 import CarItem from '../../components/CarITem/CarItem';
-// import Dropdown from "../../components/Dropdown/Dropdown";
+
 import carMakes from '../../sources/makes.json';
 import css from './Catalog.module.css';
 import { nanoid } from 'nanoid';
