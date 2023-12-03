@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import css from './ModalWindow.module.css';
-// import closeBtn from "../../images/closeBtn.png";
-// import * as closeBtn from "../../images/closeBtn.png";
-// import sprite from "../../images/sprite.svg";
+
+const imagePlaceholder =
+  'https://cdn.pixabay.com/photo/2017/10/09/01/50/rent-a-car-2832215_1280.jpg';
 
 export default function ModalWindow({ carItemModal, isOpenModalToggle }) {
   const {
@@ -14,7 +14,6 @@ export default function ModalWindow({ carItemModal, isOpenModalToggle }) {
     year,
     rentalPrice,
     address,
-    // rentalCompany,
     type,
     id,
     functionalities,
@@ -51,6 +50,11 @@ export default function ModalWindow({ carItemModal, isOpenModalToggle }) {
   }, [isOpenModalToggle]);
 
   const conditionsArr = rentalConditions.split('\n');
+
+  const handleImageError = event => {
+    event.target.src = imagePlaceholder;
+  };
+
   return (
     <div className={css.modalContainer}>
       <div className={css.modalWindow}>
@@ -70,7 +74,13 @@ export default function ModalWindow({ carItemModal, isOpenModalToggle }) {
               <line x1="6" y1="6" x2="18" y2="18"></line>{' '}
             </svg>
           </button>
-          <img src={img} alt="car" width="461px" height="248px"></img>
+          <img
+            src={img}
+            alt="car"
+            width="461px"
+            height="248px"
+            onError={handleImageError}
+          ></img>
           <div className={css.firstRowCard}>
             {make} <span className={css.spanText}>{model}</span>, {year}
           </div>
