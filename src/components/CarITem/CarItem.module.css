@@ -50,16 +50,16 @@
 }
 
 .btnAddFavorite {
-  width: 18px;
-  height: 18px;
+  /* width: 18px;
+  height: 18px; */
   position: absolute;
   top: 14px;
   right: 14px;
-  background-color: none;
+  background: none;
   color: none;
   border: none;
-  fill: #ffffff;
-  stroke: #ffffff;
+  fill: none;
+  stroke: none;
 }
 
 img {

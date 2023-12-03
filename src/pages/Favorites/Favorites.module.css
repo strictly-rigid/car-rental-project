@@ -1,3 +1,7 @@
 .favoritesContainer {
-  width: 200px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  row-gap: 50px;
+  column-gap: 29px;
 }

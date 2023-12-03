@@ -50,11 +50,16 @@ export default function CarItem({ car }) {
         className={css.btnAddFavorite}
         onClick={addToFavoritesToggler}
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          className={css.svg}
+        >
           <path
             d="M12 21.35l-1.45-1.32C6.42 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C15.09 3.81 16.76 3 18.5 3 21.58 3 24 5.42 24 8.5c0 3.78-4.42 6.86-8.55 11.54L12 21.35z"
-            fill={isFavorite ? 'blue' : 'white'}
-            stroke="blue"
+            fill={isFavorite ? '#3470FF' : 'none'}
+            stroke={isFavorite ? '#3470FF' : 'rgba(255, 255, 255, 0.8)'}
           />
         </svg>
       </button>

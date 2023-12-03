@@ -1,7 +1,8 @@
 .catalogContainer {
   display: flex;
   flex-wrap: wrap;
-  /* gap: 29px; */
+  row-gap: 50px;
+  column-gap: 29px;
   padding: 0 128px;
   justify-content: space-around;
 }
