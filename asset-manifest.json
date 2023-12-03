@@ -1,13 +1,16 @@
 {
   "files": {
-    "main.css": "/react-homework-template/static/css/main.7acaea2f.css",
-    "main.js": "/react-homework-template/static/js/main.07d3183d.js",
-    "index.html": "/react-homework-template/index.html",
-    "main.7acaea2f.css.map": "/react-homework-template/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/react-homework-template/static/js/main.07d3183d.js.map"
+    "main.css": "/car-rental-project/static/css/main.1511c6b7.css",
+    "main.js": "/car-rental-project/static/js/main.39fc27f1.js",
+    "static/js/787.6b7abe35.chunk.js": "/car-rental-project/static/js/787.6b7abe35.chunk.js",
+    "static/media/hero-pic.jpg": "/car-rental-project/static/media/hero-pic.aa274851ac06e81e0a8e.jpg",
+    "index.html": "/car-rental-project/index.html",
+    "main.1511c6b7.css.map": "/car-rental-project/static/css/main.1511c6b7.css.map",
+    "main.39fc27f1.js.map": "/car-rental-project/static/js/main.39fc27f1.js.map",
+    "787.6b7abe35.chunk.js.map": "/car-rental-project/static/js/787.6b7abe35.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/css/main.1511c6b7.css",
+    "static/js/main.39fc27f1.js"
   ]
 }
