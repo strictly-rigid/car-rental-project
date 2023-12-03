@@ -1,9 +1,9 @@
-import { useEffect } from "react";
-import PropTypes from "prop-types";
+import { useEffect } from 'react';
+import PropTypes from 'prop-types';
 
-import css from "./ModalWindow.module.css";
+import css from './ModalWindow.module.css';
 // import closeBtn from "../../images/closeBtn.png";
-import * as closeBtn from "../../images/closeBtn.png";
+// import * as closeBtn from "../../images/closeBtn.png";
 // import sprite from "../../images/sprite.svg";
 
 export default function ModalWindow({ carItemModal, isOpenModalToggle }) {
@@ -14,7 +14,7 @@ export default function ModalWindow({ carItemModal, isOpenModalToggle }) {
     year,
     rentalPrice,
     address,
-    rentalCompany,
+    // rentalCompany,
     type,
     id,
     functionalities,
@@ -27,30 +27,30 @@ export default function ModalWindow({ carItemModal, isOpenModalToggle }) {
   } = carItemModal;
 
   useEffect(() => {
-    const closeESC = (e) => {
-      if (e.code === "Escape") {
+    const closeESC = e => {
+      if (e.code === 'Escape') {
         isOpenModalToggle();
       }
     };
-    document.addEventListener("keydown", closeESC);
+    document.addEventListener('keydown', closeESC);
     return () => {
-      document.removeEventListener("keydown", closeESC);
+      document.removeEventListener('keydown', closeESC);
     };
   }, [isOpenModalToggle]);
 
   useEffect(() => {
-    const closeOnBackdrop = (e) => {
+    const closeOnBackdrop = e => {
       if (e.target.classList.contains(css.modalContainer)) {
         isOpenModalToggle();
       }
     };
-    document.addEventListener("click", closeOnBackdrop);
+    document.addEventListener('click', closeOnBackdrop);
     return () => {
-      document.removeEventListener("click", closeOnBackdrop);
+      document.removeEventListener('click', closeOnBackdrop);
     };
   }, [isOpenModalToggle]);
 
-  const conditionsArr = rentalConditions.split("\n");
+  const conditionsArr = rentalConditions.split('\n');
   return (
     <div className={css.modalContainer}>
       <div className={css.modalWindow}>
@@ -58,14 +58,16 @@ export default function ModalWindow({ carItemModal, isOpenModalToggle }) {
           <button
             type="button"
             className={css.btnModalClose}
-            onClick={() => isOpenModalToggle()}>
+            onClick={() => isOpenModalToggle()}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke="black">
+              stroke="black"
+            >
               <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>{" "}
+              <line x1="6" y1="6" x2="18" y2="18"></line>{' '}
             </svg>
           </button>
           <img src={img} alt="car" width="461px" height="248px"></img>
@@ -83,20 +85,20 @@ export default function ModalWindow({ carItemModal, isOpenModalToggle }) {
             Accessories and functionalities:
           </p>
           <div className={css.fourthRowCard}>
-            {accessories.map((item) => ` ${item} | `)}
+            {accessories.map(item => ` ${item} | `)}
           </div>
           <div className={css.fifthRowCard}>
-            {functionalities.map((item) => ` ${item} | `)}
+            {functionalities.map(item => ` ${item} | `)}
           </div>
           <p className={css.accessoriesDescription}>Rental Conditions:</p>
           <div className={css.rentalConditionsContainer}>
-            {conditionsArr.map((item) => (
+            {conditionsArr.map(item => (
               <div className={css.condition}>{item}</div>
             ))}
             <div className={css.condition}>
-              Mileage:{" "}
+              Mileage:{' '}
               <span className={css.spanText}>
-                {mileage.toString().replace(/^(\d)(\d*)$/, "$1,$2")}
+                {mileage.toString().replace(/^(\d)(\d*)$/, '$1,$2')}
               </span>
             </div>
             <div className={css.condition}>
