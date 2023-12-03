@@ -19,4 +19,21 @@
 
 .dropdownContainer {
   display: block;
+  max-width: 1440px;
+  margin: 20px auto;
+}
+
+.dropdownLabel {
+  color: #8a8a89;
+  font-size: 14px;
+  line-height: 18px;
+  display: block;
+}
+
+select {
+  width: 224px;
+  height: 48px;
+  border-radius: 14px;
+  font-size: 18px;
+  line-height: 20px;
 }
