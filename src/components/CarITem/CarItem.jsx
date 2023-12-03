@@ -1,12 +1,15 @@
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import PropTypes from "prop-types";
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 
-import css from "./CarItem.module.css";
-import ModalWindow from "../ModalWindow/ModalWindow";
-import { addToFavorites } from "../../redux/actions";
+import css from './CarItem.module.css';
+import ModalWindow from '../ModalWindow/ModalWindow';
+import { addToFavorites } from '../../redux/actions';
 // import favIcon from "../../images/heart.svg";
-import { selectFavCars } from "../../redux/selectors";
+import { selectFavCars } from '../../redux/selectors';
+
+const imagePlaceholder =
+  'https://cdn.pixabay.com/photo/2017/10/09/01/50/rent-a-car-2832215_1280.jpg';
 
 export default function CarItem({ car }) {
   const {
@@ -25,7 +28,7 @@ export default function CarItem({ car }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleModal = () => {
-    setIsModalOpen((prev) => !prev);
+    setIsModalOpen(prev => !prev);
   };
 
   const dispatch = useDispatch();
@@ -34,26 +37,37 @@ export default function CarItem({ car }) {
   };
 
   const favoriteCars = useSelector(selectFavCars);
-  const isFavorite = favoriteCars.some((favCar) => favCar.id === car.id);
+  const isFavorite = favoriteCars.some(favCar => favCar.id === car.id);
+
+  const handleImageError = event => {
+    event.target.src = imagePlaceholder;
+  };
 
   return (
     <div className={css.itemContainer}>
       <button
         type="button"
         className={css.btnAddFavorite}
-        onClick={addToFavoritesToggler}>
+        onClick={addToFavoritesToggler}
+      >
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
           <path
             d="M12 21.35l-1.45-1.32C6.42 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C15.09 3.81 16.76 3 18.5 3 21.58 3 24 5.42 24 8.5c0 3.78-4.42 6.86-8.55 11.54L12 21.35z"
-            fill={isFavorite ? "blue" : "white"}
+            fill={isFavorite ? 'blue' : 'white'}
             stroke="blue"
           />
         </svg>
       </button>
-      <img src={img} alt="car" width="274px" height="268px"></img>
+      <img
+        src={img}
+        alt="car"
+        width="274px"
+        height="268px"
+        onError={handleImageError}
+      ></img>
       <div className={css.firstRowCard}>
         <div>
-          {make} {model}, {year}
+          {make} <span className={css.spanText}>{model}</span>, {year}
         </div>
         <div>{rentalPrice}</div>
       </div>
@@ -70,7 +84,8 @@ export default function CarItem({ car }) {
       {isModalOpen && (
         <ModalWindow
           carItemModal={car}
-          isOpenModalToggle={toggleModal}></ModalWindow>
+          isOpenModalToggle={toggleModal}
+        ></ModalWindow>
       )}
     </div>
   );
